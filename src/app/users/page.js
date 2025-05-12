@@ -37,7 +37,7 @@ export default function UserPage() {
 
         <nav className="flex flex-col gap-4">
           <button className="flex items-center gap-2 font-semibold bg-black text-white px-4 py-2 rounded">
-            <User size={18} />
+            <User size={18g} />
             User
           </button>
           <button className="flex items-center gap-2 font-semibold px-4 py-2">
