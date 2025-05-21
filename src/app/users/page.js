@@ -1,32 +1,7 @@
 import React from 'react';
 import { User, Users2, LogOut, Plus } from 'lucide-react';
+import Usercard from '@/components/ui/user-card';
 
-const users = [
-  {
-    name: 'Rahmat Saudi Al Fathir As',
-    email: 'rahmatsaudi@universitasmulia.ac.id',
-    roles: ['Admin', 'Employee'],
-    status: 'Aktif',
-  },
-  {
-    name: 'Lintang',
-    email: 'lintang@universitasmulia.ac.id',
-    roles: ['Employee'],
-    status: 'Aktif',
-  },
-  {
-    name: 'Shafira',
-    email: 'shafira@universitasmulia.ac.id',
-    roles: ['Employee'],
-    status: 'Aktif',
-  },
-  {
-    name: 'Lebah Ganteng',
-    email: 'lebahganteng@universitasmulia.ac.id',
-    roles: ['Employee'],
-    status: 'Suspended',
-  },
-];
 
 export default function UserPage() {
   return (
@@ -60,34 +35,8 @@ export default function UserPage() {
         />
 
         <div className="space-y-4">
-          {users.map((user, index) => (
-            <div
-              key={index}
-              className="border border-gray-300 p-4 rounded flex justify-between items-center"
-            >
-              <div>
-                <p className="font-bold">{user.name}</p>
-                <p className="text-sm text-gray-600">{user.email}</p>
-                <div className="flex gap-2 mt-1">
-                  {user.roles.map((role, i) => (
-                    <span
-                      key={i}
-                      className="bg-black text-white text-xs px-2 py-0.5 rounded"
-                    >
-                      {role}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <span
-                className={`font-bold ${
-                  user.status === 'Suspended' ? 'text-gray-500' : ''
-                }`}
-              >
-                {user.status}
-              </span>
-            </div>
-          ))}
+           <Usercard />
+       
         </div>
 
         {/* Add button */}
