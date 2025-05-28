@@ -36,6 +36,8 @@ export default function UserPage() {
 
         <div className="space-y-4">
            <Usercard />
+           <Usercard>
+           </Usercard>
        
         </div>
 
